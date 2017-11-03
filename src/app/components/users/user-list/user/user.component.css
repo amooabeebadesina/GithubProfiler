@@ -1,0 +1,27 @@
+.avatar{
+  height:200px;
+  width:100%;
+}
+.card{
+  border: 2px solid #ffffff;
+  border-radius:10px;
+  margin: 20px 0px 20px 0px;
+  padding:10px;
+  box-shadow: 0 0 8px #888888;
+  -moz-box-shadow: 0 0 8px #888888;
+  -webkit-box-shadow: 0 0 8px #888888;
+}
+
+.card:hover {
+  border: 2px solid #a4d3ee;
+  border-radius:10px;
+  cursor: pointer;
+  margin: 20px 0px 20px 0px;
+  box-shadow: 0 0 8px #888888;
+  -moz-box-shadow: 0 0 8px #888888;
+  -webkit-box-shadow: 0 0 8px #888888;
+}
+
+.blue-text {
+  color: #a4d3ee;
+}

@@ -1,0 +1,61 @@
+<div class="text-center">
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="competitor-one col-md-3">
+        <div class="competitor-image">
+          <img [src] = "first_user.avatar_url"
+               class="img-responsive"
+                *ngIf="first_user"/>
+          <span
+            class="glyphicon glyphicon-picture"
+            *ngIf="!first_user">
+          </span>
+        </div>
+        <div class="input">
+          <input
+            type="text"
+            name="competitor_one"
+            ngModel
+            placeholder="Enter Github Username"
+            class="form-control input-form"
+            (change)="fetchFirstUser(form.value.competitor_one)"
+            required>
+        </div>
+        <h4 class="error" *ngIf="display_error.first">** User not found **</h4>
+      </div>
+      <div class="versus col-md-2 col-sm-2">
+        <h1>VS</h1>
+      </div>
+      <div class="competitor-two col-md-3">
+        <div class="competitor-image">
+          <img [src] = "second_user.avatar_url"
+               class="img-responsive"
+               *ngIf="second_user"/>
+          <span
+            class="glyphicon glyphicon-picture"
+            *ngIf="!second_user">
+          </span>
+        </div>
+        <div class="input">
+          <input
+            type="text"
+            name="competitor_two"
+            ngModel
+            placeholder="Enter Github Username"
+            class="form-control input-form"
+            (change)="fetchSecondUser(form.value.competitor_two)"
+            required>
+        </div>
+        <h4 class="error" *ngIf="display_error.second">** User not found **</h4>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+      <button
+        class="btn btn-primary btn-compete btn-lg form-group-lg"
+        type="submit"
+        [disabled]='!form.valid'>FIGHT!</button>
+    </div>
+  </form>
+</div>

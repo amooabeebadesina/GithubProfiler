@@ -1,0 +1,38 @@
+.competitor-image{
+  font-size: 260px;
+  width: 100%;
+}
+
+.versus{
+  padding: 120px 20px 100px 20px;
+}
+
+.img {
+  height: 200px;
+}
+
+.error{
+  color:red;
+}
+
+.input-form {
+  font-size: 20px;
+  padding:5px;
+}
+
+@media (max-width: 700px) {
+  .versus{
+    padding: 50px 10px 40px 10px;
+  }
+}
+
+.btn-compete {
+  margin-top: 65px;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.versus h1 {
+  border: 2px solid #444444;
+  border-radius: 30px;
+}
